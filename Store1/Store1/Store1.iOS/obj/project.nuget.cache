@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "xT+FncLEKfdVPvUSIAyc/ff1HATDrs7kvdSPKsQwx0jaByDPwXxoq6TbiPbGjeXgyYY54SfEGCgKjbgXzgs6pg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\popes\\source\\repos\\Store1\\Store1\\Store1.iOS\\Store1.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\popes\\.nuget\\packages\\fody\\6.1.0\\fody.6.1.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\nito.asyncex.context\\5.0.0\\nito.asyncex.context.5.0.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\nito.asyncex.tasks\\5.0.0\\nito.asyncex.tasks.5.0.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\nito.disposables\\2.0.0\\nito.disposables.2.0.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\realm\\4.3.0\\realm.4.3.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\realm.fody\\4.3.0\\realm.fody.4.3.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\remotion.linq\\2.2.0\\remotion.linq.2.2.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\system.codedom\\4.5.0\\system.codedom.4.5.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\system.collections.immutable\\1.4.0\\system.collections.immutable.1.4.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\system.dynamic.runtime\\4.3.0\\system.dynamic.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\system.management\\4.5.0\\system.management.4.5.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\popes\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512"
+  ],
+  "logs": []
+}

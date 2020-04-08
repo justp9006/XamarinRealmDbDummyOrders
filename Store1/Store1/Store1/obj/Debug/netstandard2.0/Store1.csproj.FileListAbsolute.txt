@@ -1,0 +1,17 @@
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\Views\StoreEntriesPage.xaml.g.cs
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\Views\StoreEntryDetailsPage.xaml.g.cs
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\Store1.csproj.CoreCompileInputs.cache
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\Store1.AssemblyInfoInputs.cache
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\Store1.AssemblyInfo.cs
+C:\Users\popes\source\repos\Store1\Store1\Store1\bin\Debug\netstandard2.0\Store1.deps.json
+C:\Users\popes\source\repos\Store1\Store1\Store1\bin\Debug\netstandard2.0\Store1.dll
+C:\Users\popes\source\repos\Store1\Store1\Store1\bin\Debug\netstandard2.0\ref\Store1.dll
+C:\Users\popes\source\repos\Store1\Store1\Store1\bin\Debug\netstandard2.0\Store1.pdb
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\Store1.csproj.Fody.CopyLocal.cache
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\Store1.dll
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\ref\Store1.dll
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\Store1.pdb
+C:\Users\popes\source\repos\Store1\Store1\Store1\obj\Debug\netstandard2.0\Store1.csprojAssemblyReference.cache
