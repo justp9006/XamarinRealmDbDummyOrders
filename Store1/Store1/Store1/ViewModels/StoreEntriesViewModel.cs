@@ -2,6 +2,7 @@
 using Store1.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Windows.Input;
@@ -17,7 +18,7 @@ namespace Store1.ViewModels
 
         private Realm _realm;//utilizat pt interactiunea cu BD
         public OrderEntry Entry { get; private set; }
-        public IEnumerable<OrderEntry> Entries { get; private set; }
+        public IQueryable<OrderEntry> Entries { get; private set; }
 
         public ICommand AddEntryCommand { get; private set; }
 
@@ -102,20 +103,21 @@ namespace Store1.ViewModels
 
             //varianta noua
 
-            //var entryToBeDeleted = _realm.All<OrderEntry>().First(e => e.Title == entry.Title);//am pus titlul pe post de cheie primara doar ca sa vad ca merge
-            //if (entryToBeDeleted == null)
-            //    return;
-            //_realm.Write(() =>
-            //{
-            //    foreach(var status in entryToBeDeleted.SentOrderStatuses.ToList())
-            //    {
-            //        _realm.Remove(status);
-            //    }
-            //    _realm.Remove(entryToBeDeleted);
-            //    Entries = _realm.All<OrderEntry>();
-            //    _realm.Refresh();
-            //});
-
+            var entryToBeDeleted = _realm.All<OrderEntry>().First(e => e.Title == entry.Title);//am pus titlul pe post de cheie primara doar ca sa vad ca merge
+            if (entryToBeDeleted == null)
+                return;
+            _realm.Write(() =>
+            {
+                foreach (var status in entryToBeDeleted.SentOrderStatuses.ToList())
+                {
+                    _realm.Remove(status);
+                }
+               
+                //Entries = _realm.All<OrderEntry>();
+                //_realm.Refresh();
+            });
+            //pentru un motiv anume> daca sterg copii si parintele in aceeasi tranzactie imi da eroare de la realm!
+            _realm.Write(() => _realm.Remove(entryToBeDeleted));
             //modifica valoarea titlului si in realm - se vede live in view
             //var entryToBeModified = _realm.All<OrderEntry>().First(e => e.Title == entry.Title);//am pus titlul pe post de cheie primara doar ca sa vad ca merge
             //if (entryToBeModified == null)
@@ -127,20 +129,20 @@ namespace Store1.ViewModels
 
             //});
 
-            var entries = _realm.All<OrderEntry>().Where<OrderEntry>(e => !e.Title.Equals(entry.Title));
-            if (entries == null)
-                return;
-            Entries = entries.ToList();
+            //var entries = _realm.All<OrderEntry>().Where<OrderEntry>(e => !e.Title.Equals(entry.Title));
+            //if (entries == null)
+            //    return;
+            //Entries = entries.ToList();
 
 
-            _realm.Write(() =>
-            {
-                _realm.RemoveAll<OrderEntry>();
-                foreach (var e in Entries)
-                {
-                    _realm.Add<OrderEntry>(e,true);
-                }
-            });
+            //_realm.Write(() =>
+            //{
+            //    _realm.RemoveAll<OrderEntry>();
+            //    foreach (var e in Entries)
+            //    {
+            //        _realm.Add<OrderEntry>(e,true);
+            //    }
+            //});
         }
     }
 }
