@@ -2441,11 +2441,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1.Android\\Store1.Android.csproj",
+      "projectUniqueName": "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1.Android\\Store1.Android.csproj",
       "projectName": "Store1.Android",
-      "projectPath": "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1.Android\\Store1.Android.csproj",
+      "projectPath": "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1.Android\\Store1.Android.csproj",
       "packagesPath": "C:\\Users\\popes\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1.Android\\obj\\",
+      "outputPath": "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -2466,8 +2466,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj": {
-              "projectPath": "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj"
+            "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj": {
+              "projectPath": "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj"
             }
           }
         }

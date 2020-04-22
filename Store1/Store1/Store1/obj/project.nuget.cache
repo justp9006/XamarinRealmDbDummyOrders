@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sBLs3ka0/1KwYXHLc/nrwRaR6lyck7nRTxeYAxV7VBvboSAMptpf2MhcDQ1P/xJebiQE6HFLUnXaQGaF3Ywu/Q==",
+  "dgSpecHash": "4KxFf/qAhtDaoPClJGsC0ie48qaUfgmtFNQa37Uf7qj+cQWySW/8LzLVRzjYksiYs0eLP0RyNQzwgHyT1RAEHw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj",
+  "projectFilePath": "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\popes\\.nuget\\packages\\fody\\6.1.0\\fody.6.1.0.nupkg.sha512",
     "C:\\Users\\popes\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

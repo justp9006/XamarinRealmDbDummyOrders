@@ -53,6 +53,7 @@ namespace Store1.ViewModels
         internal INavigation Navigation { get; set; }
 
         public ICommand SaveCommand { get; private set; }
+        public ICommand DeleteOrderCommand { get; private set; }
         public ICommand SaveLocalCommand { get; private set; }
 
         public StoreEntryDetailsViewModel(OrderEntry entry, Transaction transaction)
@@ -71,12 +72,14 @@ namespace Store1.ViewModels
             //_transaction.Commit();
             SaveCommand = new Command(Save);
             SaveLocalCommand = new Command(SaveLocal);
+            DeleteOrderCommand = new Command(DeleteOrder);
         }
         public StoreEntryDetailsViewModel()
         {
             Entries = _realm.All<OrderEntry>();
             SaveCommand = new Command(Save);
             SaveLocalCommand = new Command(SaveLocal);
+            DeleteOrderCommand = new Command(DeleteOrder);
         }
         private void Save()
         {
@@ -122,6 +125,12 @@ namespace Store1.ViewModels
             //});
             //transaction.Commit();
             //// Navigation.PopAsync(true);
+        }
+
+        private void DeleteOrder()
+        {
+            Application.Current.MainPage.DisplayAlert("Info", "Delete order!", "Ok");
+
         }
         internal void OnDisappearing()
         {

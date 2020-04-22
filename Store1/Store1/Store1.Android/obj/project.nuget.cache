@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kvCiAuwDg58V7XK/xczBRgRDNugjXgu1H8DzMo9AKcDZdgfdU1jJ+Rm0ZAVK8jbLc5DnDCKrhbqPJkAklbAWFA==",
+  "dgSpecHash": "I6ekIXXifeExo5W0uaCVtIrQ4anstnVsS94FTCQc7/wwXCEoTbpEHlmH7dDGtFtW+G5RXg+3JwDbOxVtbkliRw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1.Android\\Store1.Android.csproj",
+  "projectFilePath": "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1.Android\\Store1.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\popes\\.nuget\\packages\\fody\\6.1.0\\fody.6.1.0.nupkg.sha512",
     "C:\\Users\\popes\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",

@@ -13,6 +13,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="100" />
                 <RowDefinition Height="*" />
+               
+
                 <RowDefinition Height="3*" />
             </Grid.RowDefinitions>
             <Entry Text="{Binding Entry.Title, Mode=TwoWay}" Placeholder="Insert new order title" Grid.Row="0" />
@@ -24,50 +26,59 @@
                       x:Name="EntriesListView" 
                       ItemTapped="OnItemTapped" 
                       ItemSelected="OnItemSelected" 
-                      HasUnevenRows="True"                          
+                      HasUnevenRows="True"                         
                      >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
-                                        <Label Text="{Binding Title}"/>
-                                        <Label Text="{Binding Description}" Grid.Row="0" Grid.Column="0"></Label>
-                                    </StackLayout>
-                                    <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
-                                        <ListView 
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Delete order" Command="{Binding BindingContext.DeleteEntryCommand, Source={x:Reference EntriesListView}}" CommandParameter="{Binding .}"/>
+                                </ViewCell.ContextActions>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding LastStatus.Status,  Mode=TwoWay}"  ></Label>
+                                    <Label Text="{Binding LastStatus.ReceiverName, Mode=TwoWay}" ></Label>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+                                            <Label Text="{Binding Title}"/>
+                                            <Label Text="{Binding Description}" Grid.Row="0" Grid.Column="0"></Label>
+
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
+                                            <ListView 
                                         ItemsSource="{Binding SentOrderStatuses}" 
                                         x:Name="StatusesListView" 
                                         HasUnevenRows="True">
-                                            <ListView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <!--<TextCell                                                      
+                                                <ListView.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <!--<TextCell                                                      
                                                         Text="{Binding ReceiverName}"
                                                         Detail="{Binding Date, StringFormat='{0:dddd, MMMM d yyyy}'}">
                                                 </TextCell>-->
-                                                    <ViewCell>
-                                                        <Grid>
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="*"/>
-                                                                <ColumnDefinition Width="*"/>
-                                                            </Grid.ColumnDefinitions>
-                                                            <StackLayout Orientation="Vertical" Grid.Column="0">
-                                                                <Label Text="{Binding ReceiverName}"/>
-                                                                <Label Text="{Binding Date, StringFormat='{0:dddd, MMMM d yyyy}'}"/>
-                                                            </StackLayout>
-                                                            <Label Text="{Binding Status}" Grid.Column="1"/>
-                                                        </Grid>
-                                                    </ViewCell>
-                                                </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
-                                    </StackLayout>
+                                                        <ViewCell>
+                                                            <Grid>
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                    <ColumnDefinition Width="*"/>
+                                                                </Grid.ColumnDefinitions>
+                                                                <StackLayout Orientation="Vertical" Grid.Column="0">
+                                                                    <Label Text="{Binding ReceiverName}"/>
+                                                                    <Label Text="{Binding Date, StringFormat='{0:dddd, MMMM d yyyy}'}"/>
+                                                                </StackLayout>
+                                                                <Label Text="{Binding Status}" Grid.Column="1"/>
+                                                            </Grid>
+                                                        </ViewCell>
+                                                    </DataTemplate>
+                                                </ListView.ItemTemplate>
+                                            </ListView>
+                                        </StackLayout>
 
-                                </Grid>
+                                    </Grid>
+                                </StackLayout>
+                              
                             </ViewCell>
                         </DataTemplate>
 

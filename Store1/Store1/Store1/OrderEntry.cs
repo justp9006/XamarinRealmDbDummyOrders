@@ -12,6 +12,8 @@ namespace Store1
 
         public IList<SentOrderStatusEntry> SentOrderStatuses { get; }//legatura cu un alt obiect realm din BD
 
+        public SentOrderStatusEntry LastStatus { get; set; }
 
+        public DateTimeOffset Date => LastStatus.Date;
     }
 }

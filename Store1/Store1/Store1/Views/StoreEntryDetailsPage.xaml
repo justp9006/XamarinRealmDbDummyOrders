@@ -20,6 +20,7 @@
         <Editor Text="{Binding Entry.Description}" Placeholder="Description" Grid.Row="1" />
         <StackLayout Orientation="Horizontal" Grid.Row="2">
             <Label Text="Select order receiver to change status:" />
+            
             <ListView
                 ItemsSource="{Binding Entry.SentOrderStatuses}"
                 SelectedItem="{Binding SelectedSentOrderStatus}"

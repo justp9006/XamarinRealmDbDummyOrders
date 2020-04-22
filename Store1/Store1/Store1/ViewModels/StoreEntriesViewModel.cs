@@ -2,6 +2,7 @@
 using Store1.Views;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -44,7 +45,12 @@ namespace Store1.ViewModels
             {
                 Title = Entry.Title,
                 Description = Entry.Description,
-
+                LastStatus = new SentOrderStatusEntry
+                {
+                    Date = DateTimeOffset.Now,
+                    ReceiverName = "Hardcoded test ReceiverName",
+                    Status = "Hardcoded test Status"
+                }
             });
             for (int i = 0; i < 7; i++)
             {
@@ -73,7 +79,68 @@ namespace Store1.ViewModels
 
         private void DeleteEntry(OrderEntry entry)
         {
-            _realm.Write(() => _realm.Remove(entry));
+            //varianta veche, buna daca am relatie 1:1
+            //_realm.Write(() => _realm.Remove(entry));
+
+            //            Do the delete
+
+            //Find an object we want to do a psuedo-cascading delete on -I'm directly using the LINQ First to get the object.
+
+            //var delId = 1;
+            //            var delP = realm.All<Product>().First(p => p.Id == delId);
+            //            if (delP == null)
+            //                return;
+            //            Important fix to your sample - use ToList
+
+            //realm.Write(() => {
+            //    foreach (var r in delP.Reports.ToList())
+            //        realm.Remove(r);
+            //    realm.Remove(delP);  // lastly remove the parent 
+            //});
+            //Your approach in B was nearly correct but it ignores the fact that foreach (var report in currentProduct.Reports) is iterating a live list. Because the Reports container is updated each time you remove something, it will exit the loop before removing all the children.
+
+
+            //varianta noua
+
+            //var entryToBeDeleted = _realm.All<OrderEntry>().First(e => e.Title == entry.Title);//am pus titlul pe post de cheie primara doar ca sa vad ca merge
+            //if (entryToBeDeleted == null)
+            //    return;
+            //_realm.Write(() =>
+            //{
+            //    foreach(var status in entryToBeDeleted.SentOrderStatuses.ToList())
+            //    {
+            //        _realm.Remove(status);
+            //    }
+            //    _realm.Remove(entryToBeDeleted);
+            //    Entries = _realm.All<OrderEntry>();
+            //    _realm.Refresh();
+            //});
+
+            //modifica valoarea titlului si in realm - se vede live in view
+            //var entryToBeModified = _realm.All<OrderEntry>().First(e => e.Title == entry.Title);//am pus titlul pe post de cheie primara doar ca sa vad ca merge
+            //if (entryToBeModified == null)
+            //    return;
+            //_realm.Write(() =>
+            //{
+            //    entryToBeModified.Title = "modificat";
+            //    entryToBeModified.Description = "Description";
+
+            //});
+
+            var entries = _realm.All<OrderEntry>().Where<OrderEntry>(e => !e.Title.Equals(entry.Title));
+            if (entries == null)
+                return;
+            Entries = entries.ToList();
+
+
+            _realm.Write(() =>
+            {
+                _realm.RemoveAll<OrderEntry>();
+                foreach (var e in Entries)
+                {
+                    _realm.Add<OrderEntry>(e,true);
+                }
+            });
         }
     }
 }

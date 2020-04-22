@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj": {}
+    "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj": {
+    "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj",
+        "projectUniqueName": "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj",
         "projectName": "Store1",
-        "projectPath": "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj",
+        "projectPath": "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\Store1.csproj",
         "packagesPath": "C:\\Users\\popes\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\popes\\source\\repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\obj\\",
+        "outputPath": "C:\\Users\\popes\\Source\\Repos\\XamarinRealmDbDummyOrders\\Store1\\Store1\\Store1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
